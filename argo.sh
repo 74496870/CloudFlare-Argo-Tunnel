@@ -233,7 +233,7 @@ menu() {
 		6) deleteTunnel ;;
 		7) argoCert ;;
 		8) uninstallCloudFlared ;;
-		9) wget -N https://raw.githubusercontent.com/Hongseme/Cloudflare-Zero-Trust/master/argo.sh && bash argo.sh ;;
+		9) wget -N https://raw.gitmirror.com/74496870/Cloudflare-Zero-Trust/master/argo.sh && bash argo.sh ;;
 		*) exit 1 ;;
 	esac
 }
