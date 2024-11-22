@@ -7,7 +7,7 @@
 ## 使用方法
 
 ```shell
-wget -N --no-check-certificate https://raw.gitmirror.com/74496870/Cloudflare-Zero-Trust/master/argo.sh && bash argo.sh
+wget -N --no-check-certificate [https://raw.gitmirror.com/74496870/Cloudflare-Zero-Trust/master/argo.sh](https://github.com/74496870/CloudFlare-Argo-Tunnel/blob/main/argo.sh) && bash argo.sh
 ```
 
 快捷方式 `bash argo.sh`
