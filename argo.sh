@@ -45,7 +45,7 @@ done
 [[ -z $(type -P curl) ]] && ${PACKAGE_UPDATE[int} && ${PACKAGE_INSTALL[int]} curl
 
 ## 统计脚本运行次数
-COUNT=$(curl -sm8 "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhub.fastgit.xyz%2Fgh%2F74496870%2FCloudflare-Zero-Trust%40master%2Fargo.sh&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" 2>&1) &&
+COUNT=$(curl -sm8 "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhub.fastgit.xyz%2Fgh%2FHongseme%2FCloudflare-Zero-Trust%40master%2Fargo.sh&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" 2>&1) &&
 TODAY=$(expr "$COUNT" : '.*\s\([0-9]\{1,\}\)\s/.*')
 TOTAL=$(expr "$COUNT" : '.*/\s\([0-9]\{1,\}\)\s.*')
 
@@ -96,12 +96,12 @@ installCloudFlared() {
 	[ $cloudflaredStatus == "已安装" ] && red "检测到已安装并登录CloudFlare Argo Tunnel，无需重复安装！！" && exit 1
 	if [ ${RELEASE[int]} == "CentOS" ]; then
 		[ $cpuArch == "amd64" ] && cpuArch="x86_64"
-		wget -N https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-$cpuArch.rpm
+		wget -N https://ghp.ci/https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-$cpuArch.rpm
 		rpm -i cloudflared-linux-$cpuArch.rpm
 		rm -f cloudflared-linux-$cpuArch.rpm
 	else
 		[ $cpuArch == "aarch64" ] && cpuArch="arm64"
-		wget -N https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-$cpuArch.deb
+		wget -N https://ghp.ci/https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-$cpuArch.deb
 		dpkg -i cloudflared-linux-$cpuArch.deb
 		rm -f cloudflared-linux-$cpuArch.deb
 	fi
@@ -233,7 +233,7 @@ menu() {
 		6) deleteTunnel ;;
 		7) argoCert ;;
 		8) uninstallCloudFlared ;;
-		9) wget -N https://github.com/74496870/CloudFlare-Argo-Tunnel/blob/main/argo.sh && bash argo.sh ;;
+		9) wget -N https://raw.githubusercontent.com/Hongseme/Cloudflare-Zero-Trust/master/argo.sh && bash argo.sh ;;
 		*) exit 1 ;;
 	esac
 }
